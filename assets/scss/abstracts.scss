@@ -1,0 +1,36 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700&display=swap');
+// variables - colors txt
+$text-white: #fff;
+$text-platinium: #e8e8e8;
+$onyx:#333745;
+//variables colors bg
+$bg-white: #fff;
+$bg-gray:#bababa;
+$bg-blue: #2ab7ca;
+$bg-raising-black: #221d23;
+//utilities
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.full-h {
+    min-height: 100vh;
+}
+
+//Fontsize
+$fontSizes: 12px,
+14px,
+16px,
+20px,
+30px,
+35px,
+40px,
+45px,
+50px;
+@each $size in $fontSizes {
+    .font-#{$size} {
+        font-size: $size;
+    }
+}

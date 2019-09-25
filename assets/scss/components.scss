@@ -1,0 +1,74 @@
+//header navs
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 15px 0;
+}
+
+.menu {
+    .menu__item {
+        display: inline;
+        margin: 0 10px;
+    }
+    .menu__link {
+        color: $onyx;
+    }
+}
+
+//header navs
+//cards
+.precios__precio {
+    background-color: $bg-white;
+    padding: 25px 20px 20px;
+    min-width: 200px;
+    .precios__title {
+        font-weight: normal;
+        margin: 0 0 5px;
+    }
+    .precios__features {
+        border-top: 1px solid $bg-gray;
+        border-bottom: 1px solid $bg-gray;
+        margin: 15px 0;
+        padding: 15px 0 15px 15px;
+    }
+    .features__item {
+        margin: 7px 0;
+        list-style-type: disc;
+    }
+    .precios_link {
+        text-align: center;
+        background-color: $bg-blue;
+        color: $text-white;
+        padding: 10px 5px;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+//cards
+//footer
+.menu-footer__link {
+    color: $text-platinium;
+}
+
+footer {
+    background-color: $bg-raising-black;
+    .footer {
+        align-items: center;
+        display: flex;
+        padding: 25px 0;
+    }
+    .footer__copyright {
+        @extend .menu-footer__link;
+    }
+    .footer__nav {
+        flex: 1;
+    }
+    .menu-footer__item {
+        display: inline;
+        margin: 0 15px;
+    }
+}
+
+//footer
