@@ -1,0 +1,45 @@
+#montana {
+    animation: montana .8s ease forwards;
+}
+
+#foot {
+    animation: foot .8s ease forwards;
+}
+
+#trekking {
+    opacity: 0;
+    animation: trekking 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes montana {
+    0% {
+        transform: translate(100%, 0%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes foot {
+    0% {
+        transform: translate(-100%, 548px);
+    }
+    100% {
+        transform: translate(0, 548px);
+    }
+}
+
+@keyframes trekking {
+    0% {
+        opacity: 0;
+        transform: translate(956px, 100px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(956px, 361px);
+    }
+}

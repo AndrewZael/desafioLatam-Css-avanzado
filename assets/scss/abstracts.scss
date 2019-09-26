@@ -8,10 +8,11 @@ $onyx:#333745;
 $bg-white: #fff;
 $bg-gray:#bababa;
 $bg-blue: #2ab7ca;
+$bg-mid-blue: #77d1dd;
 $bg-raising-black: #221d23;
 //utilities
 .container {
-    width: 960px;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -32,5 +33,12 @@ $fontSizes: 12px,
 @each $size in $fontSizes {
     .font-#{$size} {
         font-size: $size;
+    }
+}
+
+// mobile
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 960px;
     }
 }

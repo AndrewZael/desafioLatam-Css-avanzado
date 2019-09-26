@@ -1,15 +1,85 @@
+//about
+.hero__paragraph {
+    line-height: 30px;
+}
+
+.hero {
+    .hero__paragraph {
+        @media screen and (min-width: 768px) {
+            width: 40%;
+        }
+    }
+    .hero__trekk {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        @media screen and (min-width: 768px) {
+            top: 0;
+        }
+    }
+}
+
+//about
+// caract
+.caract__title {
+    text-align: center;
+    padding: 100px 0 20px;
+}
+
+.caract {
+    .detalle-feature__paragraph {
+        @extend .hero__paragraph;
+    }
+    .caract__img-feature {
+        text-align: center;
+    }
+}
+
+// caract
 //precios
 #prices {
     background: url('../images/bg-price.svg') no-repeat center;
     background-size: cover;
 }
 
-.precios {
-    display: flex;
-}
-
 .prices {
-    margin: 0 auto;
+    padding-bottom: 50px;
+    .prices_title {
+        @extend .caract__title;
+        color: $text-white;
+    }
 }
 
 //precios
+// Grid
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 15px;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        grid-column: span ($i);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            grid-column: span ($i);
+        }
+    }
+}
+
+// Grid
