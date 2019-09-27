@@ -1,29 +1,88 @@
-//header navs
+//header nav
+header {
+    position: fixed;
+    top: 0;
+    background-color: $bg-white;
+    z-index: 1;
+    width: 100%;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 15px 0;
+    top: 0;
+    left: 0;
+    .header__nav-right {
+        .menu {
+            display: none;
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+    }
+    .item-menu-mob {
+        @media screen and (min-width: 768px) {
+            display: none !important;
+        }
+    }
+    .menu-mobile {
+        background-color: $bg-white;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 10px;
+        position: absolute;
+        right: 0;
+        padding: 20px;
+        text-align: right;
+        box-sizing: border-box;
+        z-index: 1;
+        width: 100%;
+        display: none;
+        .menu-mobile__item {
+            margin: 15px 0
+        }
+    }
 }
 
 .menu {
     .menu__item {
-        display: inline;
+        display: none;
         margin: 0 10px;
+        @media screen and (min-width: 768px) {
+            display: inline;
+        }
+        img {
+            vertical-align: middle;
+        }
+        &:first-child {
+            display: inline !important;
+        }
     }
     .menu__link {
         color: $onyx;
+        padding: 10px 10px;
+        &:hover {
+            color: $text-white !important;
+            background-color: $bg-blue;
+        }
+        &:focus {
+            background-color: $bg-gray;
+        }
     }
 }
 
-//header navs
+.menu__link--active {
+    color: $text-blue !important;
+}
+
+//header nav
 // button
 .btn {
     color: $text-white;
     background-color: $bg-blue;
-    font-size: 14px;
     padding: 15px 12px;
     text-align: center;
+    font-family: $opensans;
     &:hover {
         background-color: $bg-mid-blue;
     }
@@ -57,7 +116,7 @@
     }
 }
 
-//cards
+//card
 //footer
 .menu-footer__link {
     color: $text-platinium;
